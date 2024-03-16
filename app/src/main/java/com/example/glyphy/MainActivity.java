@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private GlyphManager mGM = null;
     private GlyphManager.Callback mCallback = null;
     private Button runGlyphBtn = null;
+    private Button turnOffGlyphBtn = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,19 +83,38 @@ public class MainActivity extends AppCompatActivity {
         };
     }
     private void initView() {
-        runGlyphBtn = findViewById(R.id.runGlyphBtn);
+        runGlyphBtn = findViewById(R.id.action1);
+        turnOffGlyphBtn = findViewById(R.id.turnOff);
         runGlyphBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 runGlyphs(view);
             }
         });
+        turnOffGlyphBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View view) {
+                turnOffGlyphs(view);
+            }
+        });
     }
     public void runGlyphs(View view) {
         System.out.println("Run glyphs now");
         GlyphFrame.Builder builder = mGM.getGlyphFrameBuilder();
-        GlyphFrame frame = builder.buildChannel(24).build();
-        mGM.toggle(frame);
+        // to select multiple channels, chain the commands.
+        GlyphFrame frame1 = builder.buildChannel(24).buildChannel(25).buildPeriod().build();
+        mGM.toggle(frame1);
+        // Observations:-
+        // 1. mGM.animate does not seem to have any effect. This part of the code is run and shows in the logs but the lights do not turn on.
+        // 2. mGM.toggle works in a very limited way, pressing the button turns selected frames on but clicking the button again does not work.
+        // 3. mGM.turnOff() seems to work as expected
+        // 4. buildPeriod(2000) doesn't seem to work, lights do not turn off after 2s
         System.out.println("Animation should be done by now");
+    }
+
+    public void turnOffGlyphs(View view){
+        System.out.println("Turning off glyphs now");
+        GlyphFrame.Builder builder = mGM.getGlyphFrameBuilder();
+        mGM.turnOff();
     }
 }
