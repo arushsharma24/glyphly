@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Run glyphs now");
         GlyphFrame.Builder builder = mGM.getGlyphFrameBuilder();
         // to select multiple channels, chain the commands.
-        GlyphFrame frame1 = builder.buildChannel(24).buildChannel(25).buildPeriod().build();
+        GlyphFrame frame1 = builder.buildChannel(24).buildChannel(25).buildPeriod(2000).build();
         mGM.toggle(frame1);
         // Observations:-
         // 1. mGM.animate does not seem to have any effect. This part of the code is run and shows in the logs but the lights do not turn on.
