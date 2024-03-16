@@ -1,6 +1,6 @@
 # glyphly
 
-Attempting to create an app using the Nothing Glyph Developer Kit.
+Attempting to create an app using the [Nothing Glyph Developer Kit](https://github.com/Nothing-Developer-Programme/Glyph-Developer-Kit).
 
 Will have to overcome quite a number of challenges considering I don't have experience with Android Development, nor tbh Java/Kotlin either
 
