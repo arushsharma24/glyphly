@@ -12,8 +12,9 @@ https://github.com/arushsharma24/glyphly/assets/46960231/74010798-4b2a-4ae2-a884
 <img src="https://github.com/arushsharma24/glyphly/assets/46960231/495ef90e-cdc7-45ca-b8a8-ae44c82bfed8.png" width="270" height="600">
 
 ### Plans
- - [ ] Be able to toggle Glyphs A and B with a button from the app
- - [ ] Attempt to control a glyph from the 
+ - [ ] Build the app to a usable apk (get API key first)
+ - [ ] Figure out the workings/shortcomings of the toggle, animate etc functions.
+ - [x] Attempt to control a glyph from the app
  - [x] Import the Glyphs SDK properly and connect to the Glyphs service.
  - [x] Build an android app and run it on my device
 
