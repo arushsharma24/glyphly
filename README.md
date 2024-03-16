@@ -12,13 +12,14 @@ https://github.com/arushsharma24/glyphly/assets/46960231/74010798-4b2a-4ae2-a884
 <img src="https://github.com/arushsharma24/glyphly/assets/46960231/495ef90e-cdc7-45ca-b8a8-ae44c82bfed8.png" width="270" height="600">
 
 ### Plans
+ - [ ] Choose a design for the app
  - [ ] Build the app to a usable apk (get API key first)
- - [ ] Figure out the workings/shortcomings of the toggle, animate etc functions.
+ - [ ] Figure out the workings/shortcomings/workarounds of the toggle, animate etc functions
  - [x] Attempt to control a glyph from the app
  - [x] Import the Glyphs SDK properly and connect to the Glyphs service.
  - [x] Build an android app and run it on my device
 
-##### Newbie guide
+### Newbie guide
 I plan on adding the steps that I needed to learn from the beginning as a newbie so that can serve as a guide to someone who might suffer from the same difficulties that I am.
 
 1. Create a new project in Android Studio (install if you haven't already). I started with the Empty Activity template. 
